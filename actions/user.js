@@ -29,11 +29,11 @@ export async function updateUser(data) {
           industryInsight = await db.industryInsight.create({
             data: {
               industry: data.industry, //Default Data
-              salaryRange: [],
+              salaryRanges: [],
               growthRate: 0,
-              demandLevel: "Medium",
+              demandLevel: "MEDIUM",
               topSkills: [],
-              marketOutLook: "Neutral",
+              marketOutlook: "NEUTRAL",
               keyTrends: [],
               recommendedSkills: [],
               nextUpdate: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000),
