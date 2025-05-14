@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { toast } from "sonner";
 
-const useFetch = (cb, timeoutMs = 10000) => {
+const useFetch = (cb) => {
   const [data, setData] = useState(undefined);
   const [loading, setLoading] = useState(null);
   const [error, setError] = useState(null);
@@ -9,10 +9,6 @@ const useFetch = (cb, timeoutMs = 10000) => {
   const fn = async (...args) => {
     setLoading(true);
     setError(null);
-
-    const timeoutPromise = new Promise((_, reject) =>
-      setTimeout(() => reject(new Error("Request timed out")), timeoutMs)
-    );
 
     try {
       const response = await cb(...args);
