@@ -50,7 +50,6 @@ export async function getIndustryInsights() {
   if (!user) throw new Error("User not found");
 
   const doesInsightsExist = user?.industry ? true : false
-  console.log(doesInsightsExist)
 
   // If no insights exist, generate them
   if (!doesInsightsExist) {
@@ -64,7 +63,6 @@ export async function getIndustryInsights() {
       },
     });
 
-    console.log("hi");
     return industryInsight;
   }
 
