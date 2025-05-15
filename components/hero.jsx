@@ -46,9 +46,9 @@ const HeroSection = () => {
               Get Started
             </Button>
           </Link>
-          <Link href="https://www.youtube.com/roadsidecoder">
+          <Link href="https://job-portal-gtss.onrender.com/">
             <Button size="lg" variant="outline" className="px-8">
-              Watch Demo
+              JobPortal
             </Button>
           </Link>
         </div>
